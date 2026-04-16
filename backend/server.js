@@ -18,10 +18,10 @@ app.use(cors({
     credentials: true
 }));
 
-app.use(rateLimiter);
+
 app.use(express.json());
 app.use(cookieParser());
-
+app.use(rateLimiter);
 // Routes
 app.use("/api", urlRoutes);
 app.use("/api/auth", authRoutes);
